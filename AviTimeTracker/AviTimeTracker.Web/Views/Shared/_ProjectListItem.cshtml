@@ -1,0 +1,29 @@
+﻿
+<script id="project-index-item-template" type="text/x-jsrender">
+ 
+    <div class='span3'>
+        <a href="#" id="project{{>Id}}"> {{>Name}} </a>
+    </div>
+    <div class='span4'>
+        {{>CompanyName}}
+    </div>
+    <div class='span1'>
+        <a href='#' id='detail{{>Id}}'>Edit</a>
+    </div>
+</script>
+
+<script id="project-header-template" type="text/x-jsrender">
+    <div class='row'>
+        <div class='span4'>
+            <a href='#' class='project-create'>Create New Project</a>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="span3">
+            <h3>Project Name</h3>
+        </div>
+        <div class="span4">
+            <h3>Company Name</h3>
+        </div>
+    </div>
+</script>

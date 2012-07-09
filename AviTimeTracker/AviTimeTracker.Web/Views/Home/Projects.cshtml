@@ -1,0 +1,17 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Manage Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Manage your projects</h2>
+
+<div id="notice"></div>
+<div id="app"></div>
+
+
+@Html.Partial("_ProjectListItem")
+
+@Html.Partial("_ProjectEditItemForm")

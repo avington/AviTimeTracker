@@ -1,0 +1,41 @@
+﻿ @using (Html.BeginForm("LogOn", "Account", FormMethod.Post, new {id = "logon-form", style="display: none;"}))
+ {
+     @Html.Hidden("loginIdentifier")
+ } 
+@if (Request.IsAuthenticated)
+{
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             @User.Identity.Name
+                             <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                @Html.ActionLink("Change Password", "ChangePassword", "Account")
+            </li>
+            <li>
+                @Html.ActionLink("Log Off", "LogOff", "Account")
+            </li>
+        </ul>
+    </li>
+}
+else
+{
+    <li class="login-form dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log On</a>
+       
+        <ul class="dropdown-menu">
+            <li>
+                Sign in with your existing account.
+            </li>
+            <li>
+                <img src="~/Content/Images/twitter_login.png" id="twitter-login-icon" alt="Login using Twitter."/>
+            </li>
+            <li>
+                <img src="~/Content/Images/google_login.png" id="google-login-icon" alt="Login using Google."/>
+            </li>
+            <li>
+                <img src="~/Content/Images/openid_login.png" id="openid-login-icon" alt="Login using OpenID."/>
+            </li>
+        </ul>
+              
+    </li>
+}

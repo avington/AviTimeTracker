@@ -1,0 +1,20 @@
+﻿
+<script id="project-edit-template" type="text/x-jsrender">
+    <div class="form-left-col">
+        <label>Id:</label>
+        <input type="text" id="Id" name="Id" value="{{>Id }}" disabled />
+        <label>Name:</label>
+        <input type="text" id="project-name" name="project-name" value="{{>Name}}" required/>
+        <label>Company Code:</label>
+        <input type="text" id="project-company-code" name="project-company-code" value="{{> CompanyCode }}"/>
+        <label>Company Name:</label>
+        <input type="text" id="project-company-name" name="project-company-name" value="{{> CompanyName }}"/>
+        <button class="save">Save</button>
+        <button class="delete">Delete</button>
+    </div>
+
+    <div class="form-right-col">
+        <label>Description:</label>
+        <textarea id="Description" name="Description"><%= Description %></textarea>
+    </div>
+</script>
